@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: go-ns-test
+  janus-idp.io/tekton: go-ns-test
+  backstage.io/kubernetes-id: go-ns-test
+  backstage.io/kubernetes-namespace: go-ns-test 
+  app.kubernetes.io/part-of: go-ns-test
+resources: 
+- deployment.yaml
+- route.yaml
+- service.yaml
